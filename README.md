@@ -1,2 +1,6 @@
-This is my first attempt using nixos so its not very good
+This is my first attempt using nixos so its not very good,
 atleast im trying tho :D
+
+
+
+here's a sandwich :P 🥪
