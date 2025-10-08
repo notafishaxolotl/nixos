@@ -8,6 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./vm.nix
+      ./hyprland.nix
     ];
 
   #polkit
@@ -85,8 +87,7 @@
   #configure De and Dm
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
-  programs.hyprland.enable = true;
-  
+
   #configre graphics drivers
   hardware.graphics.enable = true;
   hardware.graphics.extraPackages = with pkgs;[
@@ -101,7 +102,7 @@
   users.users.acito = {
     isNormalUser = true;
     description = "Acito";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       git
     ];
@@ -121,61 +122,29 @@
   #steam
   programs.steam.enable = true;
 
-  #vm
-  virtualisation = {
-    libvirtd = {
-      enable = true; 
-      #qemuGuest.enable = true;
-    };
-    # Set this to true for better copy/paste and dynamic resolution
-    #spice-vdagentd.enable = true;
-  };
-  programs.virt-manager.enable = true;
+  #bluetooth
+  hardware.bluetooth.enable = true;
 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
+    git
     superfile
-    kitty
     neovim
     wget
     fastfetch
-    matugen
-    fuzzel
-    eww
-    waybar
-    waypaper 
-    nwg-look
     plymouth
     swww
-    waypaper
-    nwg-dock-hyprland
     matugen
     easyeffects
-    nwg-drawer
-    playerctl
     spicetify-cli
     kdePackages.dolphin
     kdePackages.dolphin-plugins
-    blender
     home-manager
     wdisplays
-    wget
     vivaldi
     warehouse
-    swaynotificationcenter
-    hyprpolkitagent
-    nwg-look
-    sl
-    btop-rocm
-    rpcs3
-    pcsx2
-    duckstation
-    scrcpy
-    krita
     xfce.ristretto
-    python3Full
-    android-tools
-    neo-cowsay
+    bluetui
     ];
 
   #extra fonts
