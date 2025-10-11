@@ -12,12 +12,17 @@
 
 	"modules-left": [
 		"custom/spacing",
-		"custom/workspaces", "hyprland/workspaces"
+		"custom/workspaces",
+		"hyprland/workspaces",
+	],
+
+	"modules-center": [
+ 		
 	],
 
 	"modules-right": [
+		"tray",
 		"custom/volume", "wireplumber",
-		"custom/brightness", "backlight",
 		"custom/battery", "battery",
 		"custom/layout", "hyprland/language",
 		"custom/time","clock",
@@ -39,18 +44,23 @@
 			"3": [],
 			"4": [],
 			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": [],
 		},
 		"format-icons": {
-			"1": "first",
-			"2": "second",
-			"3": "third",
-			"4": "fourth",
-			"5": "fifth",
-			"6": "sixth",
-			"7": "seventh",
-			"8": "eigth",
-			"9": "ninth",
-			"10": "tenth",
+			"1": "First",
+			"2": "Second",
+			"3": "Third",
+			"4": "Fourth",
+			"5": "Fifth",
+			"6": "Sixth",
+			"7": "Seventh",
+			"8": "Eigth",
+			"9": "Ninth",
+			"10": "Tenth",
 		}
 	},
 	"hyprland/language": {
@@ -67,12 +77,6 @@
 		"tooltip": false,
 		"format": "volume",
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-	},
-	"custom/brightness": {
-		"tooltip": false,
-		"format": "brightness",
-		"on-scroll-up": "brightnessctl s 5%+",
-		"on-scroll-down": "brightnessctl s 5%-"
 	},
 	"custom/battery": {
 		"tooltip": false,
@@ -95,11 +99,6 @@
 		"format": "{:%H:%M}",
 		"format-alt": "{:%Y-%m-%d}",
 		"tooltip": false,
-	},
-	"backlight": {
-		"format": "{percent}%",
-		"tooltip": false,
-		"scroll-step": 5.0,
 	},
 	"wireplumber": {
 		"format": "{volume}%",

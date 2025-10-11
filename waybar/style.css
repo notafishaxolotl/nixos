@@ -28,7 +28,7 @@ window#waybar {
 	border-left: 2px solid rgba(158, 148, 137, 0.7);
 }
 
-#wireplumber, #backlight, #battery, #language, #clock {
+#wireplumber, #battery, #language, #clock {
 	padding: 4px 10px 0px 0px;
 	margin: 2px 0px;
 
