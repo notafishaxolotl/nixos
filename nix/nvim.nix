@@ -5,7 +5,11 @@
   programs.neovim = {
     enable =true;
   };
-  environment.variables.EDITOR = "nvim";
+
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
 
   environment.systemPackages = with pkgs; [
 
