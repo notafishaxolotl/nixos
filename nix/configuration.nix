@@ -9,7 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./vm.nix
-      ./hyprland.nix
+      ./environments/hyprland.nix
+      ./environments/awesome.nix
+      ./environments/sway.nix
     ];
 
   #polkit
@@ -136,14 +138,13 @@
     swww
     matugen
     easyeffects
-    kdePackages.dolphin
-    kdePackages.dolphin-plugins
     home-manager
-    wdisplays
-    vivaldi
+    wdisplays 
     warehouse
     xfce.ristretto
     bluetui
+    kdePackages.dolphin
+    kdePackages.dolphin-plugins
     ];
 
   #extra fonts
