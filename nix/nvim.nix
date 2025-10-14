@@ -13,6 +13,12 @@
 
   programs.vimPlugins = {
     enable = true;
+    treesitter = {
+      enable = true;
+    };
+    LazyVim = {
+      enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
