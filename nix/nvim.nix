@@ -11,6 +11,10 @@
     VISUAL = "nvim";
   };
 
+  programs.vimPlugins = {
+    enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
   neovim
   ];
