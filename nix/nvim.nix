@@ -12,8 +12,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-
-
+  nvim
   ];
 
 }
