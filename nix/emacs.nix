@@ -4,6 +4,7 @@
   
   programs.emacs = {
     enable =true;
+    package = pkgs.emacs; 
   };
 
   environment.variables = {
@@ -12,7 +13,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-     emacs
   ];
 
 }
