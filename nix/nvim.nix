@@ -4,6 +4,7 @@
 
   programs.neovim = {
     enable =true;
+    package = pkgs.emacs; 
   };
 
 
@@ -27,7 +28,6 @@
 
 
   environment.systemPackages = with pkgs; [
-  neovim
   ];
 
 }
