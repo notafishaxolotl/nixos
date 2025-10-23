@@ -8,10 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./obs.nix
       ./vm.nix
+      ./neovim.nix
       ./environments/hyprland.nix
       ./environments/awesome.nix
-      ./environments/sway.nix
+      ./environments/niri.nix
     ];
 
   #polkit
@@ -131,7 +133,6 @@
   environment.systemPackages = with pkgs; [
     git
     superfile
-    neovim
     wget
     fastfetch
     plymouth
@@ -145,6 +146,8 @@
     bluetui
     kdePackages.dolphin
     kdePackages.dolphin-plugins
+    spicetify-cli
+    spotify
     ];
 
   #extra fonts
