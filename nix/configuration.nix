@@ -22,6 +22,13 @@
   #kernal
   boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelParams = [
+    "quiet"
+    "splash"
+    "boot.shell_on_fail"
+    "udev.log_priority=3"
+    "rd.systemd.show_status=auto"
+  ];
 
   #shell
   programs.zsh = {
@@ -45,8 +52,20 @@
     efiSupport = true;
     device = "nodev"; # or specify the device if needed
     useOSProber = true; # for dual-booting
+    theme = "/etc/nixos/Afro";
   };
-   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.plymouth = {
+    enable = true;
+    theme = "cubes";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "cubes" ];
+        })
+      ];
+  };
 
   networking.hostName = "Nix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -135,7 +154,6 @@
     superfile
     wget
     fastfetch
-    plymouth
     swww
     matugen
     easyeffects
