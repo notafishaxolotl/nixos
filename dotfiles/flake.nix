@@ -6,9 +6,11 @@
     nixpkgs.url = "nixpkgs/nixos-25.05";
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -17,7 +19,12 @@
     nixosConfigurations = {
       Nix = lib.nixosSystem {
         inherit system; 
-	modules = [ ./configuration.nix ];
+	modules = [ 
+	  ./nixos/configuration.nix
+	];
+	specialArgs = {
+          pkgs-unstable = nixpkgs-unstable.legacyPackages.${pkgs.system};
+        };
       };
     };
 
