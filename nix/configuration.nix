@@ -11,6 +11,7 @@
       ./obs.nix
       ./vm.nix
       ./neovim.nix
+      #./davinci.nix
       ./environments/hyprland.nix
       ./environments/awesome.nix
       ./environments/niri.nix
@@ -54,6 +55,9 @@
     useOSProber = true; # for dual-booting
     theme = "/etc/nixos/Afro";
   };
+  
+  boot.loader.timeout = 7;
+
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.plymouth = {
@@ -109,12 +113,17 @@
   
   #configure De and Dm
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
+
+  services.displayManager.ly = {
+    enable = true; 
+  };
 
   #configre graphics drivers
   hardware.graphics.enable = true;
   hardware.graphics.extraPackages = with pkgs;[
-    amdvlk 
+    amdvlk
+    mesa.opencl
+    rocmPackages.clr.icd
   ];
  
 
@@ -126,9 +135,7 @@
     isNormalUser = true;
     description = "Acito";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      git
-    ];
+    packages = with pkgs; [];
   };
 
   # Allow unfree packages
@@ -147,7 +154,7 @@
 
   #bluetooth
   hardware.bluetooth.enable = true;
-
+ 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     git
@@ -164,9 +171,24 @@
     bluetui
     kdePackages.dolphin
     kdePackages.dolphin-plugins
-    spicetify-cli
-    spotify
-    ];
+  ];
+
+  #environment.variables = {
+  #  RUSTICL_ENABLE = "radeonsi";
+  #};
+  #hardware.graphics = {
+  #  enable = true;
+  #  extraPackages = with pkgs; [
+  #    mesa.opencl # Enables Rusticl (OpenCL) support
+  #  ];
+  #};
+
+  #hardware.graphics = {
+  # enable = true;
+  # extraPackages = with pkgs; [
+  #   rocmPackages.clr.icd
+  #   ];
+  # };
 
   #extra fonts
   fonts.packages = with pkgs; [
