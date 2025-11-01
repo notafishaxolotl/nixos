@@ -11,7 +11,7 @@
       ./obs.nix
       ./vm.nix
       ./neovim.nix
-      #./davinci.nix
+      ./unstable.nix
       ./environments/hyprland.nix
       ./environments/awesome.nix
       ./environments/niri.nix
@@ -171,6 +171,7 @@
     bluetui
     kdePackages.dolphin
     kdePackages.dolphin-plugins
+    spotify
   ];
 
   #environment.variables = {

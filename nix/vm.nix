@@ -19,6 +19,9 @@
     adwaita-icon-theme
     qemu_kvm
     dmidecode
+    wineWowPackages.full
+    wineWowPackages.staging
+    winetricks
   ];
 
   # Manage the virtualisation services
