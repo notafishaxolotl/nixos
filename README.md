@@ -3,7 +3,7 @@ atleast im trying tho :D
 
 here's a sandwich :P 🥪
 
-oh yeah to make this work run:
+oh yeah to make the unstable pkgs module usable, run:
 
 ```sh
 nix-channel --add https://channels.nixos.org/nixos-unstable nixpkgs
