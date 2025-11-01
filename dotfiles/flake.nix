@@ -10,11 +10,12 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }:
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, spicetify-nix, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
     in{
     nixosConfigurations = {
       Nix = lib.nixosSystem {
@@ -29,12 +30,13 @@
     };
 
     homeConfigurations = {
-      acito = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs; 
-        modules = [./home.nix ];
+        acito = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ 
+	    ./home.nix
+	    spicetify-nix.homeManagerModules.default
+	  ];
+        };
       };
     };
-
-  };
-
 }
