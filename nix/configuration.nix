@@ -171,7 +171,6 @@
     bluetui
     kdePackages.dolphin
     kdePackages.dolphin-plugins
-    spotify
   ];
 
   #environment.variables = {

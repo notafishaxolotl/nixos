@@ -14,7 +14,4 @@
     VISUAL = "nvim";
   };
 
-  environment.systemPackages = with pkgs; [
-  ];
-
 }
