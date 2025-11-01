@@ -23,3 +23,4 @@ Use the command below to view pkg sources:
 ```sh
 nix-channel --list | grep nixos
 ```
+your gonna have to set the custom steam icons yourself, you can get them from https://www.steamgriddb.com/
