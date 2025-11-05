@@ -26,14 +26,13 @@ in
   
   nixpkgs.config.allowUnfree = true;
 
-  programs.spicetify = {
+  programs.spicetify =
+  let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  in
+  {
     enable = true;
-    #enabledExtensions = with spicePkgs.extensions; [
-    #  adblockify
-    #  hidePodcasts
-    #  shuffle
-    #];
-    #colorScheme = "mocha";
+   
   };
 
 
@@ -58,6 +57,7 @@ in
     esptool-ck
     espflash
     unzip
+    gnome-disk-utility
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
