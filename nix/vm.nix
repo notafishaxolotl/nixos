@@ -6,7 +6,10 @@
   programs.virt-manager.enable = true;
 
   # Add user to libvirtd group
-  #users.users.acito.extraGroups = [ "libvirtd" ];
+  users.users.acito.extraGroups = [
+    "libvirtd"
+    "waydroid"
+  ];
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
@@ -37,4 +40,6 @@
     spiceUSBRedirection.enable = true;
   };
   services.spice-vdagentd.enable = true;
+
+  virtualisation.waydroid.enable = true;
 }

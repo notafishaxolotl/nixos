@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ./obs.nix
       ./vm.nix
-      ./neovim.nix
+      ./nvim.nix
       ./unstable.nix
       ./environments/hyprland.nix
       ./environments/awesome.nix
