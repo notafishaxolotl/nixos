@@ -7,7 +7,6 @@
     ./hardware-configuration.nix
     ./obs.nix
     ./vm.nix
-    ./nvim.nix
     ./unstable.nix
 
     # Desktop environments
@@ -127,6 +126,14 @@
     "ca-derivations"
     "auto-allocate-uids"
   ];
+
+  #neovim
+  programs.neovim = {
+    defaultEditor = true;
+    enable = true;
+    vimAlias = true;
+    viAlias = true;
+  };
 
   # Enable Steam gaming platform
   programs.steam.enable = true;
