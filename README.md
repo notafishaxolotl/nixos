@@ -3,6 +3,11 @@ atleast im trying tho :D
 
 here's a sandwich :P 🥪
 
+run this to get spf command
+```sh
+bash -c "$(curl -sLo- https://superfile.dev/install.sh)"
+```
+
 oh yeah to make the unstable pkgs module usable, run:
 
 ```sh
