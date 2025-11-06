@@ -1,28 +1,28 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { inputs, config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./obs.nix
-      ./vm.nix
-      ./nvim.nix
-      ./unstable.nix
-      ./environments/hyprland.nix
-      ./environments/awesome.nix
-      ./environments/niri.nix
-    ];
+  imports = [
+    # Include hardware and service profiles
 
-  #polkit
+    ./hardware-configuration.nix
+    ./obs.nix
+    ./vm.nix
+    ./nvim.nix
+    ./unstable.nix
+
+    # Desktop environments
+
+    ./environments/hyprland.nix
+    ./environments/awesome.nix
+    ./environments/niri.nix
+  ];
+
+  # Enable PolicyKit for privilege escalation dialogs
   security.polkit.enable = true;
 
-  #kernal
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelModules = [ "kvm-amd" ];
+  # Kernel configuration
+  boot.kernelPackages = pkgs.linuxPackages_zen; # Use Zen kernel
+  boot.kernelModules = [ "kvm-amd" ];           # Required for AMD virtualization
   boot.kernelParams = [
     "quiet"
     "splash"
@@ -31,62 +31,45 @@
     "rd.systemd.show_status=auto"
   ];
 
-  #shell
+  # Shell configuration
   programs.zsh = {
     enable = true;
-
-    #enableCompletions = true;
-    #autosuggestions.enable = true;
-    #syntaxHighlighting.enable = true;
-
-    #shellAliases = {
-    #  ll = "ls -l";
-    #    update = "sudo nixos-rebuild switch";
-    #};
-    #history.size = 10001;
   };
   users.defaultUserShell = pkgs.zsh;
 
-  # Bootloader.
+  # Bootloader setup: GRUB configured for EFI systems and dual-boot
   boot.loader.grub = {
     enable = true;
     efiSupport = true;
-    device = "nodev"; # or specify the device if needed
-    useOSProber = true; # for dual-booting
+    device = "nodev";         # For EFI systems, or specify actual device otherwise
+    useOSProber = true;       
     theme = "/etc/nixos/Afro";
   };
-  
   boot.loader.timeout = 7;
-
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Plymouth: Graphical boot splash
   boot.plymouth = {
     enable = true;
     theme = "cubes";
-      themePackages = with pkgs; [
-        # By default we would install all themes
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "cubes" ];
-        })
-      ];
+    themePackages = with pkgs; [
+      (adi1090x-plymouth-themes.override {
+        selected_themes = [ "cubes" ];
+      })
+    ];
   };
 
-  networking.hostName = "Nix"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # Hostname for this system
+  networking.hostName = "Nix";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
+  # Enable NetworkManager for device/network management
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # Set system timezone
   time.timeZone = "Europe/London";
 
-  # Select internationalisation properties.
+  # Localization settings
   i18n.defaultLocale = "en_GB.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_GB.UTF-8";
     LC_IDENTIFICATION = "en_GB.UTF-8";
@@ -99,49 +82,45 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  # Configure keymap in X11
+  # Keyboard layout for X11
   services.xserver.xkb = {
     layout = "gb";
     variant = "";
   };
 
-  # Mount drives
+  # Enable mounting of drives via udisks2
   services.udisks2.enable = true;
   
-  #configure flatpak
+  # Enable Flatpak for containerized desktop applications
   services.flatpak.enable = true;
-  
-  #configure De and Dm
+
+  # Enable X server and display manager
   services.xserver.enable = true;
+  services.displayManager.ly.enable = true; 
 
-  services.displayManager.ly = {
-    enable = true; 
-  };
-
-  #configre graphics drivers
+  # Graphics drivers (AMD)
   hardware.graphics.enable = true;
-  hardware.graphics.extraPackages = with pkgs;[
+  hardware.graphics.extraPackages = with pkgs; [
     amdvlk
-    mesa.opencl
+    mesa.opencl   
     rocmPackages.clr.icd
   ];
- 
 
-  # Configure console keymap
+  # Console keyboard layout
   console.keyMap = "uk";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # User configuration (replace 'acito' with your username if needed)
   users.users.acito = {
     isNormalUser = true;
     description = "Acito";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" ]; # Network admin and sudo
     packages = with pkgs; [];
   };
 
-  # Allow unfree packages
+  # Allow installation of unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # experimental fetures
+  # Experimental Nix features
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -149,13 +128,13 @@
     "auto-allocate-uids"
   ];
 
-  #steam
+  # Enable Steam gaming platform
   programs.steam.enable = true;
 
-  #bluetooth
+  # Enable Bluetooth functionality
   hardware.bluetooth.enable = true;
- 
-  # List packages installed in system profile
+
+  # System-wide package selection
   environment.systemPackages = with pkgs; [
     git
     superfile
@@ -173,54 +152,17 @@
     kdePackages.dolphin-plugins
   ];
 
-  #environment.variables = {
-  #  RUSTICL_ENABLE = "radeonsi";
-  #};
-  #hardware.graphics = {
-  #  enable = true;
-  #  extraPackages = with pkgs; [
-  #    mesa.opencl # Enables Rusticl (OpenCL) support
-  #  ];
-  #};
-
-  #hardware.graphics = {
-  # enable = true;
-  # extraPackages = with pkgs; [
-  #   rocmPackages.clr.icd
-  #   ];
-  # };
-
-  #extra fonts
+  # Extra fonts (With all Nerd Fonts)
   fonts.packages = with pkgs; [
-      dina-font 
+    dina-font
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  # (Uncomment and configure services below as needed)
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
+  # Enable OpenSSH daemon for remote access
   # services.openssh.enable = true;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment? 
-  #Yes
-
+  # System state version (DO NOT change unless you know what you're doing)
+  # This determines default locations and settings for stateful data.
+  system.stateVersion = "25.05"; # Set on first install and recommended to keep constant
 }
