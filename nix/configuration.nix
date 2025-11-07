@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ./obs.nix
     ./vm.nix
+    ./drives.nix
     ./unstable.nix
 
     # Desktop environments
