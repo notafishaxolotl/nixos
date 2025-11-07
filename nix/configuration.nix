@@ -96,9 +96,10 @@
 
   # Enable X server and display manager
   services.xserver.enable = true;
-  services.displayManager.ly = {
+  services.displayManager.sddm = {
     enable = true;
-    theme = "matrix";
+    autoNumlock = true;
+    #theme = "";
   };
 
   # Graphics drivers (AMD)
