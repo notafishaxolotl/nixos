@@ -4,8 +4,6 @@ let
   spicetify-nix = import <spicetify-nix>;
 in
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "acito";
   home.homeDirectory = "/home/acito";
  
@@ -31,11 +29,6 @@ in
    
   };
 
-
-     # For Flakeless:
-     # spicePkgs = spicetify-nix.packages;
-
-     # With flakes:
   home.packages = with pkgs; [
     neo-cowsay
     android-tools
@@ -55,15 +48,6 @@ in
     unzip
     gnome-disk-utility
   ];
-
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
-  home.file = {
-  };
-
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
