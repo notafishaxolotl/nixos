@@ -11,7 +11,10 @@ in
     inputs.zen-browser.homeModules.beta
   ];
  
-  programs.zen-browser.enable = true;
+  programs.zen-browser = {
+    enable = true;
+    #nativeMessagingHosts = [pkgs.firefoxpwa];
+  };
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
@@ -26,7 +29,40 @@ in
   in
   {
     enable = true;
-   
+
+    theme = spicePkgs.themes.hazy;
+
+    enabledExtensions = with spicePkgs.extensions; [
+      adblock
+      hidePodcasts
+      shuffle
+      oneko
+      beautifulLyrics
+      fullScreen
+      betterGenres
+      powerBar
+      trashbin
+      wikify
+      featureShuffle
+      oldSidebar
+      songStats
+      oldLikeButton
+      oldCoverClick
+      playingSource
+      oldSidebar
+      fullAlbumDate
+    ];
+
+    enabledCustomApps = with spicePkgs.apps; [
+      lyricsPlus
+      #newReleases
+      #ncsVisualizer
+    ];
+
+    enabledSnippets = with spicePkgs.snippets; [
+      rotatingCoverart
+      #pointer
+    ];
   };
 
   home.packages = with pkgs; [
