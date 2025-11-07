@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
     ./obs.nix
     ./vm.nix
-    ./drives.nix
+    ./drive.nix
     ./unstable.nix
 
     # Desktop environments
@@ -162,6 +162,8 @@
     bluetui
     kdePackages.dolphin
     kdePackages.dolphin-plugins
+    gcc
+    clang
   ];
 
   # Extra fonts (With all Nerd Fonts)
