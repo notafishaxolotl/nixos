@@ -96,7 +96,9 @@
 
   # Enable X server and display manager
   services.xserver.enable = true;
-  services.displayManager.ly.enable = true; 
+  services.displayManager.ly = {
+    enable = true;
+  };
 
   # Graphics drivers (AMD)
   hardware.graphics.enable = true;
