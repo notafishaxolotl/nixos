@@ -10,6 +10,7 @@ in
   home.homeDirectory = "/home/acito";
  
   imports = [
+    inputs.zen-browser.homeModules.beta
   ];
  
   # This value determines the Home Manager release that your configuration is
