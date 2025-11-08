@@ -37,4 +37,14 @@ sudo waydroid init
 ```
 
 oh this?
-yeah thats just incase your using the vm module with waydroid
+yeah thats just incase your using the vm module with waydroidi
+
+oh look more comands for extra ext4 inetrnal drives...yay.
+
+```sh
+sudo nixos-rebuild switch
+sudo umount /mnt/DoubleDisk  # Unmount
+sudo mount -a                 # Remount with new options
+sudo chown -R $USER:users /mnt/DoubleDisk
+mkdir -p /mnt/DoubleDisk/SteamLibrary/steamapps
+```
