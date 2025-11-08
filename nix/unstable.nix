@@ -11,7 +11,11 @@
     };
   };
 
-  environment.systemPackages = with pkgs.unstable; [
-    davinci-resolve
-  ];
+  environment.systemPackages = with pkgs; [
+      unstable.davinci-resolve
+    ];
+  # Or, for a specific option:
+  # programs.mpv.package = pkgs-unstable.mpv;
+  
+  # ... rest of your config
 }

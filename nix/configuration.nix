@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
     ./obs.nix
     ./vm.nix
-    ./drive.nix
+    ./drives.nix
     ./unstable.nix
 
     # Desktop environments
@@ -21,7 +21,7 @@
   security.polkit.enable = true;
 
   # Kernel configuration
-  boot.kernelPackages = pkgs.linuxPackages_zen; # Use Zen kernel
+  boot.kernelPackages = pkgs.linuxPackages_zen; 
   boot.kernelModules = [ "kvm-amd" ];           # Required for AMD virtualization
   boot.kernelParams = [
     "quiet"
@@ -41,7 +41,7 @@
   boot.loader.grub = {
     enable = true;
     efiSupport = true;
-    device = "nodev";         # For EFI systems, or specify actual device otherwise
+    device = "nodev";         # For EFI systems, specify actual device otherwise
     useOSProber = true;       
     theme = "/etc/nixos/Afro";
   };
