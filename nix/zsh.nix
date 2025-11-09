@@ -3,6 +3,7 @@
 {
   programs.zsh = {
     autocd = true;
+    enableLsColors = true;
 
     autosuggestions = {
       enable = true;
