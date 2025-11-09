@@ -3,7 +3,7 @@
 {
   programs.zsh = {
     autocd = true;
-    autosuggestions = true
+    autosuggestions.enable = true
 
     enable = true;
     ohMyZsh = {
