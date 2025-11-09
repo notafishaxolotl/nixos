@@ -7,6 +7,7 @@
     autosuggestions = {
       enable = true;
       highlight = true;
+      srategy = [ "history" ];
     }
 
     enable = true;
