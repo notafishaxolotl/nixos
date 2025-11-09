@@ -2,6 +2,9 @@
 
 {
   programs.zsh = {
+    autocd = true;
+    autosuggestions = true
+
     enable = true;
     ohMyZsh = {
       enable = true;
