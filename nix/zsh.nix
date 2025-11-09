@@ -6,6 +6,7 @@
 
     autosuggestions = {
       enable = true
+      highlight = true;
     }
 
     enable = true;
