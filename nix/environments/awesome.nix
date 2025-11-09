@@ -8,9 +8,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vivaldi
-    feh
-    ghostty
     dmenu
   ];
 

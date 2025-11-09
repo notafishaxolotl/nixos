@@ -9,6 +9,8 @@
     ./vm.nix
     ./drives.nix
     ./unstable.nix
+    ./zsh.nix
+    ./sddm.nix
 
     # Desktop environments
 
@@ -30,12 +32,6 @@
     "udev.log_priority=3"
     "rd.systemd.show_status=auto"
   ];
-
-  # Shell configuration
-  programs.zsh = {
-    enable = true;
-  };
-  users.defaultUserShell = pkgs.zsh;
 
   # Bootloader setup: GRUB configured for EFI systems and dual-boot
   boot.loader.grub = {
@@ -94,13 +90,8 @@
   # Enable Flatpak for containerized desktop applications
   services.flatpak.enable = true;
 
-  # Enable X server and display manager
+  # Enable X server
   services.xserver.enable = true;
-  services.displayManager.sddm = {
-    enable = true;
-    autoNumlock = true;
-    #theme = "";
-  };
 
   # Graphics drivers (AMD)
   hardware.graphics.enable = true;
@@ -148,6 +139,10 @@
 
   # System-wide package selection
   environment.systemPackages = with pkgs; [
+    kitty 
+    imagemagick
+    vivaldi
+    feh
     git
     superfile
     wget

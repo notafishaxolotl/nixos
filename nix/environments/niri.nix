@@ -2,12 +2,13 @@
 
 {
 
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+  };
   
   environment.systemPackages = with pkgs; [
     mako
     imagemagick
-    kitty
     fuzzel
     matugen
     waypaper
