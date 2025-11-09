@@ -3,75 +3,49 @@
 	"position": "top",
 	"height": 32,
 	"spacing": 0,
-
 	"tooltip": false,
-
 	"margin-top": 12,
 	"margin-left": 12,
 	"margin-right": 12,
-
 	"modules-left": [
 		"custom/spacing",
-		"custom/workspaces",
-		"hyprland/workspaces",
+		"niri/workspaces",
+		"custom/notification"
 	],
-
 	"modules-center": [
  		
 	],
-
 	"modules-right": [
 		"tray",
-		"custom/volume", "wireplumber",
-		"custom/battery", "battery",
-		"custom/layout", "hyprland/language",
-		"custom/time","clock",
+		"custom/volume",
+		"wireplumber",
+		"custom/battery",
+		"battery",
+		"custom/layout",
+		"niri/language",
+		"custom/time",
+		"clock",
 		"custom/spacing"
 	],
-
-	"hyprland/workspaces": {
-		"disable-scroll": false,
-		"all-outputs": true,
-		"active-only": false,
+	"niri/workspaces": {
 		"format": "{icon}",
-		"persistent-workspace": true,
-		"alphabetical_sort": true,
-		"on-scroll-up": "hyprctl dispatch workspace e+1",
-		"on-scroll-down": "hyprctl dispatch workspace e-1",
-		"persistent-workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": [],
-			"6": [],
-			"7": [],
-			"8": [],
-			"9": [],
-			"10": [],
-		},
 		"format-icons": {
-			"1": "First",
-			"2": "Second",
-			"3": "Third",
-			"4": "Fourth",
-			"5": "Fifth",
-			"6": "Sixth",
-			"7": "Seventh",
-			"8": "Eigth",
-			"9": "Ninth",
-			"10": "Tenth",
+			"1": "I",
+			"2": "II",
+			"3": "III",
+			"4": "IV",
+			"5": "V",
+			"6": "VI",
+			"7": "VII",
+			"8": "VIII",
+			"9": "IX",
+			"10": "X"
 		}
 	},
-	"hyprland/language": {
+	"niri/language": {
 		"format": "{}",
 		"format-en": "en",
-		"format-sk": "sk",
-		"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
-	},
-	"custom/workspaces": {
-		"tooltip": false,
-		"format": "workspaces"
+		"format-sk": "sk"
 	},
 	"custom/volume": {
 		"tooltip": false,
@@ -84,8 +58,7 @@
 	},
 	"custom/layout": {
 		"tooltip": false,
-		"format": "layout",
-		"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+		"format": "layout"
 	},
 	"custom/time": {
 		"tooltip": false,
@@ -98,17 +71,33 @@
 	"clock": {
 		"format": "{:%H:%M}",
 		"format-alt": "{:%Y-%m-%d}",
-		"tooltip": false,
+		"tooltip": false
 	},
 	"wireplumber": {
 		"format": "{volume}%",
 		"format-muted": "muted",
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"tooltip": false,
-		"scroll-step": 5.0,
+		"scroll-step": 5.0
 	},
 	"battery": {
 		"format": "{capacity}%",
+		"tooltip": false
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"custom/notification": {
 		"tooltip": false,
+		"format": "<span size='16px'>{icon}</span>",
+		"exec": "swaync-client -swb",
+		"on-click": "sleep 0.1; swaync-client -t -sw",
+		"on-click-right": "swaync-client -C",
+		"format-icons": {
+			"notification": "a",
+			"none": "b",
+			"dnd-notification": "c",
+			"dnd-none": "d"
+		}
 	}
 }
