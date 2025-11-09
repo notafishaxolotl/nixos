@@ -5,7 +5,7 @@
     autocd = true;
 
     autosuggestions = {
-      enable = true
+      enable = true;
       highlight = true;
     }
 
