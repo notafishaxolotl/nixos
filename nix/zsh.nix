@@ -30,12 +30,14 @@
     # Optional: Add custom aliases
     shellAliases = {
       upgrade-flake = "nix flake update --flake ./.dotfiles";
-      upgrade-home = "home-manager switch --flake ./.dotfiles";
+      rebuild-home = "home-manager switch --flake ./.dotfiles";
       rebuild = "sudo nixos-rebuild switch";
       upgrade = "sudo nixos-rebuild switch --upgrade";
       config = "sudo vi /etc/nixos/configuration.nix";
       home = "vi ~/.dotfiles/home.nix";
       flake = "vi ~/.dotfiles/flake.nix";
+      garbage = "nix-collect-garbage -d";
+      empty = "trash empty --all";
     };
   };
   

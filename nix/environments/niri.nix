@@ -22,6 +22,12 @@
     nwg-look
     swaynotificationcenter
     wireplumber
+    xwayland-satellite 
   ];
+
+  services.xserver.enable = true;
+  services.xserver.displayManager.startx.enable = true;
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
 }

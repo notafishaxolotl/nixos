@@ -14,7 +14,7 @@
 
     # Desktop environments
 
-    ./environments/hyprland.nix
+    #./environments/hyprland.nix
     ./environments/awesome.nix
     ./environments/niri.nix
   ];
@@ -148,10 +148,8 @@
     wget
     fastfetch
     swww
-    matugen
-    easyeffects
-    home-manager
-    wdisplays 
+    trashy
+    home-manager 
     warehouse
     xfce.ristretto
     bluetui
