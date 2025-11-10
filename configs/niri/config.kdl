@@ -12,6 +12,10 @@ workspace "8"
 workspace "9"
 
 input {
+
+    disable-power-key-handling
+    focus-follows-mouse
+
     keyboard {
         numlock
         xkb {
