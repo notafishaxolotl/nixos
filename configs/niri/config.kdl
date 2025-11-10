@@ -13,11 +13,10 @@ workspace "9"
 
 input {
     keyboard {
+        numlock
         xkb {
 
         }
-
-        numlock
     }
 
     // Next sections include libinput settings.
