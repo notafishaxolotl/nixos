@@ -631,18 +631,9 @@ binds {
 
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
-    // 1. **MANDATORY** for NixOS Electron/Chromium compatibility
-    // Forces apps packaged on NixOS with Ozone support to use Wayland.
     NIXOS_OZONE_WL "1"
-    
-    // 2. **Recommended** for modern Electron apps (version 28+)
-    // Tells Electron to automatically pick the best platform (Wayland when available).
     ELECTRON_OZONE_PLATFORM_HINT "auto"
-    
-    // 3. **Optional** - For older Electron apps or general Wayland hints
     GDK_BACKEND "wayland"
-    
-    // 4. **Optional** - For Qt applications (like some KDE apps)
     QT_QPA_PLATFORM "wayland"
 }
 
