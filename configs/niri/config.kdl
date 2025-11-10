@@ -111,18 +111,18 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 7
 
-    struts {
-        left -2
-        right -2
-        top -10
-        bottom -10
-    }
+    //struts {
+    //    left -2
+    //    right -2
+    //    top -10
+    //    bottom -10
+    //}
 
-    shaddow {
-        on
-        softness 3
-        color "#f1dbbb"
-    }
+    //shaddow {
+   //     on
+   //     softness 3
+   //     color "#f1dbbb"
+  // }
     center-focused-column "never"
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
@@ -163,7 +163,7 @@ layout {
         //off
 
         // How many logical pixels the ring extends out from the windows.
-        width 4
+        width 1
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -219,12 +219,12 @@ layout {
     // Left and right struts will cause the next window to the side to always be visible.
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
-    struts {
+    //struts {
         // left 64
         // right 64
         // top 64
         // bottom 64
-    }
+    //}
     background-color "transparent"
 }
 
