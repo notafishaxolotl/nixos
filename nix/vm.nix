@@ -7,7 +7,7 @@
 
   # Add user to libvirtd group
   users.users.acito.extraGroups = [
-    "libvirtd"
+    #"libvirtd"
     "waydroid"
   ];
 
@@ -15,16 +15,16 @@
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
-    spice spice-gtk
-    spice-protocol
+    #spice spice-gtk
+    #spice-protocol
     win-virtio
-    win-spice
+    #win-spice
     adwaita-icon-theme
     qemu_kvm
     dmidecode
-    wineWowPackages.full
     wineWowPackages.staging
     winetricks
+    bottles
   ];
 
   # Manage the virtualisation services
@@ -38,8 +38,7 @@
       };
     };
     spiceUSBRedirection.enable = true;
+    waydroid.enable = true;
   };
   services.spice-vdagentd.enable = true;
-
-  virtualisation.waydroid.enable = true;
 }

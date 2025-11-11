@@ -37,7 +37,8 @@
       home = "vi ~/.dotfiles/home.nix";
       flake = "vi ~/.dotfiles/flake.nix";
       garbage = "nix-collect-garbage -d";
-      empty = "trash empty --all";
+      trashy = "trash empty --all";
+      c = "clear";
     };
   };
   
