@@ -3,6 +3,9 @@ atleast im trying tho :D
 
 here's a sandwich :P 🥪
 
+MAKE SURE YOURE home/system.stateversion ALIGN WITH YOUR INSTALL BEFORE SWITCHING
+
+
 run this to get spf command
 ```sh
 bash -c "$(curl -sLo- https://superfile.dev/install.sh)"
