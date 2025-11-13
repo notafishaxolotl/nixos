@@ -12,6 +12,7 @@
     focusEvents = false;
     newSession = true;
     secureSocket = false;
+    disableConfirmationPrompt = false;
     escapeTime = 0;
 
     plugins = with pkgs; [
