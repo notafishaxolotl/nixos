@@ -7,6 +7,7 @@
     clock24 = true;
     tmuxinator.enable = true;
     baseIndex = 1;
+    mouse = true;
   };
 
 }
