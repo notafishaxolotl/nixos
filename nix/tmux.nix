@@ -11,6 +11,7 @@
     mouse = true;
     focusEvents = false;
     newSession = true;
+    secureSocket = false;
     escapeTime = 0;
 
     plugins = with pkgs; [
