@@ -5,7 +5,8 @@
   programs.tmux = {
     enable = true;
     clock24 = true;
-    tmuxinator.enable = true
+    tmuxinator.enable = true;
+    baseIndex = 1;
   };
 
 }
