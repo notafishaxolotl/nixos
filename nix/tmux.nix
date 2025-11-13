@@ -17,8 +17,9 @@
     historyLimit = 5000;
     escapeTime = 0;
 
-    plugins = with pkgs; [
-      tmuxPlugins.better-mouse-mode
+    plugins = with pkgs.tmuxPlugins; [
+      better-mouse-mode
+      gruvbox
     ];
 
     programs.tmate = {
