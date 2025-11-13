@@ -9,6 +9,8 @@
     baseIndex = 1;
     mouse = true;
     focusEvents = false;
+    newSession = true;
+    escapeTime = 0;
   };
 
 }
