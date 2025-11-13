@@ -20,6 +20,7 @@
     plugins = with pkgs.tmuxPlugins; [
       better-mouse-mode
       gruvbox
+      dotbar
     ];
 
     programs.tmate = {
