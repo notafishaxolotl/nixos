@@ -13,6 +13,7 @@
     newSession = true;
     secureSocket = false;
     disableConfirmationPrompt = false;
+    historyLimit = 5000;
     escapeTime = 0;
 
     plugins = with pkgs; [
