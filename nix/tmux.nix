@@ -7,6 +7,7 @@
     shell = "${pkgs.bash}/bin/zsh";
 
     clock24 = true;
+    keyMode = "vi";
     baseIndex = 1;
     mouse = true;
     focusEvents = false;
