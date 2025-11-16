@@ -9,6 +9,7 @@ in
  
   imports = [
     inputs.zen-browser.homeModules.beta
+    ./unstable.nix
   ];
   
   programs.zen-browser = {
@@ -82,6 +83,8 @@ in
     esptool-ck
     espflash
     unzip
+    p7zip
+    activate-linux
     gnome-disk-utility
   ];
 
