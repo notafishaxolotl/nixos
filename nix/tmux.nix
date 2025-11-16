@@ -1,37 +1,36 @@
-{config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-
   programs.tmux = {
     enable = true;
-    shell = "${pkgs.bash}/bin/zsh";
+    newSession = false;
 
     clock24 = true;
     keyMode = "vi";
     baseIndex = 1;
-    mouse = true;
-    focusEvents = false;
-    newSession = true;
+    #mouse = true;
+    #focusEvents = false;
     secureSocket = false;
-    disableConfirmationPrompt = false;
+    #disableConfirmationPrompt = false;
     historyLimit = 5000;
     escapeTime = 0;
 
     plugins = with pkgs.tmuxPlugins; [
       better-mouse-mode
       gruvbox
-      dotbar
+      #dotbar
     ];
 
-    programs.tmate = {
-      enable = true;
-      # FIXME: This causes tmate to hang.
-      # extraConfig = config.xdg.configFile."tmux/tmux.conf".text;
-    };
-    tmuxinator = {
-      enable = true;
-    };
-
   };
+
+  #programs.tmuxinator = {
+  #  enable = true;
+  #};
+
+  #programs.tmate = {
+  #  enable = true;
+  #  # FIXME: This causes tmate to hang.
+  #  # extraConfig = config.xdg.configFile."tmux/tmux.conf".text;
+  #};
 
 }

@@ -39,6 +39,7 @@
       garbage = "nix-collect-garbage -d";
       trashy = "trash empty --all";
       c = "clear";
+      watermark = "activate-linux";
     };
   };
   

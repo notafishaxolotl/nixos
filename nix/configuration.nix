@@ -11,6 +11,7 @@
     ./unstable.nix
     ./zsh.nix
     ./sddm.nix
+    ./tmux.nix
 
     # Desktop environments
 
