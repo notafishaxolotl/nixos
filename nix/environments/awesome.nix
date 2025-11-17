@@ -9,6 +9,11 @@
 
   environment.systemPackages = with pkgs; [
     dmenu
+    ghostty
+    paperview
+    eww
+    Libnotify
+    playerctl
   ];
 
 }
