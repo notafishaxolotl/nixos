@@ -16,7 +16,7 @@
     # Desktop environments
 
     #./environments/hyprland.nix
-    ./environments/awesome.nix
+    ./environments/openbox.nix
     ./environments/niri.nix
   ];
 
