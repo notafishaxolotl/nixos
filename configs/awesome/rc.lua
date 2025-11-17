@@ -6,6 +6,9 @@ local hotkeys_widget = require("awful.hotkeys_popup").widget
 local old_c = nil
 local called = false
 
+terminal = "ghostty"
+modkey = "Mod4"
+editor = "nvim"
 
 -- Get a tag and a client
 local function get_c_and_t()
