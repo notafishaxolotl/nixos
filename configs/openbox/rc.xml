@@ -7,5 +7,6 @@
   <followMouse>yes</followMouse>
   <focusLast>yes</focusLaat>
 </focus>
-
+<keybind>
+</keybind>
 </openbox_config>
