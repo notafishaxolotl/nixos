@@ -321,6 +321,7 @@ binds {
     Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Tab hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Z hotkey-overlay-title="Run Browser: zen" { spawn "zen"; }
+    Mod+s {spawn "spotify";}
     Mod+P {spawn "powermenu"; }
     Mod+B {spawn "bgselector"; }
     Mod+Space {toggle-window-floating; }
