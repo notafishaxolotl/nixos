@@ -16,6 +16,7 @@
     eww
     libnotify
     playerctl
+    openbox-menu
   ];
 
 }
