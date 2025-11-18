@@ -52,6 +52,9 @@
   <keybind key="W-0">
     <action name="GoToDesktop"><to>10</to></action>
   </keybind>
+
+  <>
+
 </keyboard>
 
 </openbox_config>
