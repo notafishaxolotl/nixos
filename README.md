@@ -1,6 +1,8 @@
 This is my first attempt using nix so its not very good,
 atleast im trying tho :D
 
+yes this inclueds all the window managers i have ried since ive started nix so please be selective in what you install because of bloat
+
 here's a sandwich :P 🥪
 
 MAKE SURE YOURE home/system.stateversion ALIGN WITH YOUR INSTALL BEFORE SWITCHING
