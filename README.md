@@ -6,7 +6,7 @@ the enviroment modules are realy helpfull to know whats in each envrionment, its
 
 here's a sandwich :P 🥪
 
-MAKE SURE YOURE home/system.stateversion ALIGN WITH YOUR INSTALL BEFORE SWITCHING
+MAKE SURE YOURE home/system.stateversion ARE THE SAME AS YOUR ORIGONAL BEFORE SWITCHING
 
 https://home-manager.dev/
 
