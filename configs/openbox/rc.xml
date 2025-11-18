@@ -3,10 +3,30 @@
                 xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <focus>
-  <focusNew>yes<focusNew>
+  <focusNew>yes</focusNew>
   <followMouse>yes</followMouse>
-  <focusLast>yes</focusLaat>
+  <focusLast>yes</focusLast>
 </focus>
+
+<desktops>
+    <number>10</number>
+    <firstdesk>1</firstdesk>
+
+    <names>
+      <name>Desktop 1</name>
+      <name>Desktop 2</name>
+      <name>Desktop 3</name>
+      <name>Desktop 4</name>
+      <name>Desktop 5</name>
+      <name>Desktop 6</name>
+      <name>Desktop 7</name>
+      <name>Desktop 8</name>
+      <name>Desktop 9</name>
+      <name>Desktop 10</name>
+    </names>
+
+    <popupTime>525</popupTime>
+</desktops>
 
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
@@ -73,6 +93,65 @@
     </action>
   </keybind>
 
+  <keybind key="W-S-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+      </action>
+  </keybind>
+
+  <keybind key="W-S-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+      </action>
+  </keybind>
+  <keybind key="W-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+      </action>
+  </keybind>
+  
+  <keybind key="W-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+      </action>
+  </keybind>
+    
+  <keybind key="W-S-5">
+      <action name="SendToDesktop">
+        <to>5</to>
+      </action>
+  </keybind>
+    
+  <keybind key="W-S-6">
+      <action name="SendToDesktop">
+        <to>6</to>
+      </action>
+  </keybind>
+    
+  <keybind key="W-S-7">
+      <action name="SendToDesktop">
+        <to>7</to>
+      </action>
+  </keybind>
+    
+  <keybind key="W-S-8">
+      <action name="SendToDesktop">
+        <to>8</to>
+      </action>
+  </keybind>
+    
+  <keybind key="W-S-9">
+      <action name="SendToDesktop">
+        <to>9</to>
+      </action>
+  </keybind>
+    
+  <keybind key="W-S-0">
+      <action name="SendToDesktop">
+        <to>10</to>
+      </action>
+  </keybind>
+
   <!-- Aplication Keybinds -->
 
   <keybind key="W-q">
@@ -83,6 +162,29 @@
     </action>
   </keybind>
 
+  <keybind key="W-z">
+    <action name="Execute">
+      <command>
+        zen
+      </command>
+    </action>
+  </keybind>
+
+  <keybind key="W-x">
+    <action name="Execute">
+      <command>
+        vivalidi
+      </command>
+    </action>
+  </keybind>
+
+  <keybind key="W-Tab">
+    <action name="Execute">
+      <command>
+        rofi -dmenu
+      </command>
+    </action>
+  </keybind>
 </keyboard>
 
 </openbox_config>
