@@ -5,6 +5,7 @@
 <focus>
   <focusNew>yes<focusNew>
   <followMouse>yes</followMouse>
+  <focusLast>yes</focusLaat>
 </focus>
 
 </openbox_config>
