@@ -55,6 +55,10 @@
 
   <!-- Aplication Keybinds -->
 
+  <keybind key="W-q">
+    <action></action>
+  </keybind>
+
 </keyboard>
 
 </openbox_config>
