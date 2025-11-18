@@ -56,7 +56,9 @@
   <!-- Aplication Keybinds -->
 
   <keybind key="W-q">
-    <action name="Execute"><command>ghostty</command></action>
+    <action name="Execute">
+      <command>ghostty</command>
+    </action>
   </keybind>
 
 </keyboard>
