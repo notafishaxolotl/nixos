@@ -3,15 +3,9 @@
                 xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <focus>
-  <focusNew>
-    yes
-  <focusNew>
-  <followMouse>
-    yes
-  </followMouse>
-  <focusLast>
-    yes
-  </focusLaat>
+  <focusNew>yes<focusNew>
+  <followMouse>yes</followMouse>
+  <focusLast>yes</focusLaat>
 </focus>
 
 <keyboard>
