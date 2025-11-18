@@ -57,7 +57,9 @@
 
   <keybind key="W-q">
     <action name="Execute">
-      <command>ghostty</command>
+      <command>
+        ghostty
+      </command>
     </action>
   </keybind>
 
