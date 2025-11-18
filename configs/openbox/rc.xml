@@ -56,7 +56,7 @@
   <!-- Aplication Keybinds -->
 
   <keybind key="W-q">
-    <action></action>
+    <action name="Execute"></action>
   </keybind>
 
 </keyboard>
