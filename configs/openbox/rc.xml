@@ -3,7 +3,8 @@
                 xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <focus>
-  <focus-new><focus-new>
+  <focusNew>yes<focusNew>
+  <followMouse>yes</followMouse>
 </focus>
 
 </openbox_config>
