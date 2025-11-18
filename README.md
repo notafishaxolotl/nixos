@@ -2,6 +2,7 @@ This is my first attempt using nix so its not very good,
 atleast im trying tho :D
 
 yes this inclueds all the window managers i have ried since ive started nix so please be selective in what you install because of bloat
+the enviroment modules are realy helpfull to know whats in each envrionment, its in Nix
 
 here's a sandwich :P 🥪
 
