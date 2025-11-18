@@ -8,6 +8,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    rofi
     dmenu
     ghostty
     paperview
