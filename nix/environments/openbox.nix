@@ -11,6 +11,7 @@
     dmenu
     ghostty
     paperview
+    polybarFull
     eww
     libnotify
     playerctl
