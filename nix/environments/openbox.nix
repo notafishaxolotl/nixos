@@ -7,12 +7,14 @@
     enable =true;
   };
 
+
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   services.xserver.deviceSection = ''
   Option "TearFree" "true"
 '';
   services.xserver.exportConfiguration = true;
+
 
   environment.systemPackages = with pkgs; [
     rofi
