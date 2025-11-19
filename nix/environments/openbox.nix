@@ -7,7 +7,7 @@
     enable =true;
   };
   services.xserver.enable = true;
-services.xserver.videoDrivers = [ "amdgpu" ]; # Ensure the amdgpu driver is specified
+  services.xserver.videoDrivers = [ "amdgpu" ]; # Ensure the amdgpu driver is specified
 
   services.xserver.deviceSection = ''
   Option "TearFree" "true"
