@@ -26,6 +26,7 @@
     libnotify
     playerctl
     openbox-menu
+    obconf
   ];
 
 }
