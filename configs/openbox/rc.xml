@@ -2,6 +2,11 @@
 <openbox_config xmlns="http://openbox.org/3.4/rc"
                 xmlns:xi="http://www.w3.org/2001/XInclude">
 
+<resistance>
+  <strength>5</strength>
+  <screen_edge_strength>15</screen_edge_strength>
+</resistance>
+
 <focus>
   <focusNew>yes</focusNew>
   <followMouse>yes</followMouse>
@@ -27,11 +32,6 @@
 
     <popupTime>525</popupTime>
 </desktops>
-
-<resistance>
-  <strength>5</strength>
-  <screen_edge_strength>15</screen_edge_strength>
-</resistance>
 
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
