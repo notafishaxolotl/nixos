@@ -33,6 +33,10 @@
     <popupTime>525</popupTime>
 </desktops>
 
+<theme>
+  <name>frosted glass</name>
+</theme>
+
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
 
