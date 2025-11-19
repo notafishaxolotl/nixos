@@ -15,12 +15,12 @@
 '';
   services.xserver.exportConfiguration = true;
 
-services.pipewire = {
-  enable = true;
-  alsa.enable = true;
-  alsa.openRCCompatibility = true;
-  pulse.enable = true;
-};
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.openRCCompatibility = true;
+    pulse.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     rofi
