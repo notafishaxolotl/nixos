@@ -1,4 +1,4 @@
 background = ffffff
 foreground = 000000
 background-opacity = 0.85 
-background-blur = 3
+background-blur = 10
