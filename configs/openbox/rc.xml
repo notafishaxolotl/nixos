@@ -28,6 +28,11 @@
     <popupTime>525</popupTime>
 </desktops>
 
+<resistance>
+  <></>
+  <></>
+</resistance>
+
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
 
