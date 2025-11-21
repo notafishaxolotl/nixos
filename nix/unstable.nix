@@ -11,7 +11,8 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-      unstable.davinci-resolve
+  environment.systemPackages = with pkgs.unstable; [
+      davinci-resolve
+      xonotic
     ];
 }
