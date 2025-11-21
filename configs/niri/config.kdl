@@ -260,6 +260,8 @@ window-rule {
 window-rule {
     match app-id="zen"
     open-fullscreen false
+
+    draw-border-with-background false
 }
 
 window-rule {
