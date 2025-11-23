@@ -76,7 +76,6 @@ in
     pcsx2
     rpcs3
     sl
-    blender
     ardour
     hollywood
     spotify-player
