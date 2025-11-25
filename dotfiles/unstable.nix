@@ -15,5 +15,6 @@
     ryubing
     blender
     android-studio
+    clang-tools
   ];
 }
