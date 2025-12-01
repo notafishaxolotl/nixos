@@ -9,6 +9,10 @@
 
 
   services.xserver.enable = true;
+  services.xserver.libinput = {
+    enable = true;
+    naturalScrolling = true;
+  };
   services.xserver.videoDrivers = [ "amdgpu" ];
   services.xserver.deviceSection = ''
   Option "TearFree" "true"
@@ -18,7 +22,7 @@
   services.pipewire = {
     enable = true;
     alsa.enable = true;
-    alsa.openRCCompatibility = true;
+    #alsa.openRCCompatibility = true;
     pulse.enable = true;
   };
 

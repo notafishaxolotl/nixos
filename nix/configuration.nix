@@ -10,7 +10,8 @@
     ./drives.nix
     ./unstable.nix
     ./zsh.nix
-    ./sddm.nix
+    ./ly.nix
+    #./sddm.nix
     ./tmux.nix
 
     # Desktop environments
@@ -33,6 +34,8 @@
     "udev.log_priority=3"
     "rd.systemd.show_status=auto"
   ];
+
+  services.udev.packages = with pkgs; [ game-devices-udev-rules ];
 
   # Bootloader setup: GRUB configured for EFI systems and dual-boot
   boot.loader.grub = {
@@ -158,6 +161,7 @@
     kdePackages.dolphin-plugins
     gcc
     clang
+    cmake
   ];
 
   # Extra fonts (With all Nerd Fonts)
