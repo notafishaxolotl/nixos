@@ -65,7 +65,7 @@ in
   home.packages = with pkgs; [
     neo-cowsay
     android-tools
-    python3Full
+    #python3Full
     krita
     scrcpy
     duckstation
