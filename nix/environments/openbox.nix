@@ -9,9 +9,9 @@
 
 
   services.xserver.enable = true;
-  services.xserver.libinput = {
+  services.libinput = {
     enable = true;
-    naturalScrolling = true;
+    touchpad.naturalScrolling = true;
   };
   services.xserver.videoDrivers = [ "amdgpu" ];
   services.xserver.deviceSection = ''
@@ -22,7 +22,6 @@
   services.pipewire = {
     enable = true;
     alsa.enable = true;
-    #alsa.openRCCompatibility = true;
     pulse.enable = true;
   };
 

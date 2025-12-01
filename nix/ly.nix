@@ -23,7 +23,7 @@ in
       bigclock = true;
       clock = "%a %b %d %H:%M:%S"; 
       hide_borders = true;
-      tty = 2;
+      tty = lib.mkForce 2;
     };
   };
 }

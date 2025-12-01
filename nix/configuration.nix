@@ -100,7 +100,7 @@
   # Graphics drivers (AMD)
   hardware.graphics.enable = true;
   hardware.graphics.extraPackages = with pkgs; [
-    amdvlk
+#    amdvlk
     mesa.opencl   
     rocmPackages.clr.icd
   ];
