@@ -16,5 +16,6 @@
     blender
     android-studio
     clang-tools
+    glslang
   ];
 }

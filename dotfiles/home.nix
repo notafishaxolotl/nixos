@@ -42,7 +42,6 @@ in
       fullScreen
       betterGenres
       powerBar
-      trashbin
       wikify
       featureShuffle
       oldSidebar
@@ -56,13 +55,10 @@ in
 
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
-      #newReleases
-      #ncsVisualizer
     ];
 
     enabledSnippets = with spicePkgs.snippets; [
       rotatingCoverart
-      #pointer
     ];
   };
 
@@ -75,16 +71,31 @@ in
     duckstation
     pcsx2
     rpcs3
-    sl
+    sl 
     ardour
     hollywood
     spotify-player
     esptool-ck
     espflash
+    usbimager
     unzip
     p7zip
     activate-linux
     gnome-disk-utility
+
+    vulkan-tools
+    vulkan-headers
+    vulkan-loader
+    vulkan-validation-layers
+    glslang
+    glfw
+    glm
+    gnumake
+    libxisf
+    xorg.libXxf86vm
+    pkg-config
+
+    dualsensectl
   ];
 
   # Let Home Manager install and manage itself.
