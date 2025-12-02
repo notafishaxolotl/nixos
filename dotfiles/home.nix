@@ -83,18 +83,6 @@ in
     activate-linux
     gnome-disk-utility
 
-    vulkan-tools
-    vulkan-headers
-    vulkan-loader
-    vulkan-validation-layers
-    glslang
-    glfw
-    glm
-    gnumake
-    libxisf
-    xorg.libXxf86vm
-    pkg-config
-
     dualsensectl
   ];
 
