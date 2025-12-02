@@ -10,8 +10,7 @@
     ./drives.nix
     ./unstable.nix
     ./zsh.nix
-    ./ly.nix
-    #./sddm.nix
+    ./login.nix
     ./tmux.nix
 
     # Desktop environments
@@ -44,6 +43,10 @@
     device = "nodev";         # For EFI systems, specify actual device otherwise
     useOSProber = true;       
     theme = "/etc/nixos/Afro";
+    extraConfig = ''
+      set gfxmode=1024x768
+      set gfxpayload=keep
+    '';
   };
   boot.loader.timeout = 7;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -159,9 +162,7 @@
     bluetui
     kdePackages.dolphin
     kdePackages.dolphin-plugins
-    gcc
-    clang
-    cmake
+    direnv
   ];
 
   # Extra fonts (With all Nerd Fonts)
