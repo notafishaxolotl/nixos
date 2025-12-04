@@ -11,6 +11,9 @@
     wireplumber
     xwayland-satellite
     hyprpolkitagent
+    labwc-tweaks
+    labwc-menu-generator
+    labwc-gtktheme
   ];
   
   services.xserver.enable = true;
