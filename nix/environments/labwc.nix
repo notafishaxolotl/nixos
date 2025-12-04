@@ -16,6 +16,7 @@
     labwc-gtktheme
     eww
     dunst
+    playerctl
   ];
   
   services.xserver.enable = true;
