@@ -15,6 +15,7 @@
     labwc-menu-generator
     labwc-gtktheme
     eww
+    dunst
   ];
   
   services.xserver.enable = true;
