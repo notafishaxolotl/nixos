@@ -7,7 +7,9 @@
 };
 
   environment.systemPackages = with pkgs; [
-
+    wireplumber
+    xwayland-satellite
+    hyprpolkitagent
   ];
   
   services.xserver.enable = true;
