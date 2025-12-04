@@ -2,10 +2,9 @@
 
 {
 
-  services.xserver.windowManager.labwc = {
+  programs.labwc = {
     enable = true;
-    xwayland.enable = true;
-};
+  };
 
   environment.systemPackages = with pkgs; [
     wireplumber
