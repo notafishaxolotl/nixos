@@ -14,6 +14,7 @@
     labwc-tweaks
     labwc-menu-generator
     labwc-gtktheme
+    eww
   ];
   
   services.xserver.enable = true;
