@@ -41,3 +41,6 @@ oh look more comands for extra ext4 inetrnal drives to work with steam...yay.
 sudo chown -R acito:users /mnt/DoubleDisk
 mkdir -p /mnt/DoubleDisk/SteamLibrary/steamapps
 ```
+```sh
+chmod +x ~/.config/Scripts/.fehbg
+```
