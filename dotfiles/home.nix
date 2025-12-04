@@ -82,8 +82,7 @@ in
     p7zip
     activate-linux
     gnome-disk-utility
-
-    dualsensectl
+    kicad
   ];
 
   # Let Home Manager install and manage itself.
