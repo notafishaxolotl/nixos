@@ -163,6 +163,8 @@
     kdePackages.dolphin
     kdePackages.dolphin-plugins
     direnv
+    clang
+    gcc
   ];
 
   # Extra fonts (With all Nerd Fonts)
