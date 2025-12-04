@@ -17,6 +17,7 @@
     eww
     dunst
     playerctl
+    walker
   ];
   
   services.xserver.enable = true;
