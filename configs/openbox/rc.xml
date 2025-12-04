@@ -27,12 +27,12 @@
       <name>Desktop 9</name>
       <name>Desktop 10</name>
     </names>
-    <popupTime>525</popupTime>
+    <popupTime>420</popupTime>
   </desktops>
   <theme>
     <!--~/.local/share/themes-->
     <!--use obconf-->
-    <name>Mikachu</name>
+    <name>Onyx</name>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <titleLayout>NLIMC</titleLayout>

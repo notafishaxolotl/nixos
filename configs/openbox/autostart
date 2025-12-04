@@ -1,1 +1,2 @@
-polybar &
+~/.fehbg &
+polybar -r &
