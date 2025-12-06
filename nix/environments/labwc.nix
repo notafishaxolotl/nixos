@@ -17,6 +17,7 @@
     dunst
     playerctl
     walker
+    swaybg
   ];
   
   services.xserver.enable = true;

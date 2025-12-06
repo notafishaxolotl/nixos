@@ -18,6 +18,7 @@
     #./environments/hyprland.nix
     ./environments/openbox.nix
     ./environments/niri.nix
+    ./environments/labwc.nix
   ];
 
   # Enable PolicyKit for privilege escalation dialogs
