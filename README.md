@@ -85,7 +85,7 @@ I reused my Waybar config for `niri`, so there's a `hypr` variant in Waybar — 
 
 ## Final thoughts
 
-- This is experimental and tailored to my hardware and preferences.
+- This is experimental and tailored to my hardware and preferences (AMD).
 - Feel free to open issues or PRs if you want suggestions, fixes, or help adapting parts of this repo to your setup.
 - And yes labwc is just openbox in wayland, I still love them both equally but niri is where my Heart is truly at.
 
