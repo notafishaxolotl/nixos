@@ -68,7 +68,13 @@ And if you want Steam to recognize your drive for games.
 mkdir -p /mnt/<your-mount-point>/SteamLibrary/steamapps
 ```
 
-Make sure <your-mount-point> and the drive uuid match in 'drives.nix'.
+Make sure <your-mount-point> and the drive UUID match in 'drives.nix'.
+
+You can check UUIDs with this:
+
+```sh
+lsblk -f
+```
 
 Set custom Steam icons (SteamGridDB has many). Steam's configuration for custom icons is manual.
 
