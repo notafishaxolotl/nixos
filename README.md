@@ -86,7 +86,7 @@ chmod +x ~/.config/Scripts/.fehbg
 
 ## Why there's a Waybar hypr config
 
-I reused my Waybar config for `niri`, so there's a `hypr` variant in Waybar — kept to avoid duplicating what already works for me.
+I reused my Waybar config for `niri`, so there's a `hypr` variant in Waybar — choose whichever works best for you.
 
 ---
 
