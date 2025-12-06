@@ -88,4 +88,4 @@ I reused my Waybar config for `niri`, so there's a `hypr` variant in Waybar — 
 - This is experimental and tailored to my hardware and preferences.
 - Feel free to open issues or PRs if you want suggestions, fixes, or help adapting parts of this repo to your setup.
 
-Here's a sandwich for you 🥪 — thanks for checking this out!
+Thanks for reading. Here's a sandwich for your troubles. 🥪
