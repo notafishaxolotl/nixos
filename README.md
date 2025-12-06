@@ -1,14 +1,14 @@
 # NixOS Configuration (personal)
 
-Welcome — this is my personal NixOS configuration. It's a first attempt at using Nix and may contain some rough edges, but it works for my setup. Use it as a reference, pick what you need, and avoid installing everything (it's easy to get bloated).
+Welcome — this is my personal NixOS configuration. It's a first attempt at using Nix and may contain some rough edges, but it works for my setup. Use it as a reference, pick what you need, and avoid installing everything (it's easy to get very bloated, i have too many pkgs).
 
 ---
 
 ## Quick notes & warnings
 
-- This repo contains a lot of different window manager configurations I've tried. Be selective when copying or enabling packages/modules — only enable what you actually use.
-- Make sure your `home.stateVersion` / `system.stateVersion` match your original system's version before switching configurations. Mismatched state versions can cause issues.
-- Environment modules (in the repo) are useful — they show what each environment contains.
+- This repo contains a lot of different configurations I've tried, so be selective when copying or enabling packages/modules — only enable what you actually want to use.
+- Make sure your `home.stateVersion` / `system.stateVersion` match your system original's before switching configurations. Mismatched state versions may cause issues.
+- Environment modules (in the repo) are useful, trust me — they show what each environment contains.
 
 ---
 
