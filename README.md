@@ -37,9 +37,9 @@ bash -c "$(curl -sLo- https://superfile.dev/install.sh)"
 If you need packages from `nixos-unstable`, add the channel and update:
 
 ```sh
-# As your user
+# Per user
 nix-channel --add https://channels.nixos.org/nixos-unstable nixpkgs
-# If required
+# System wide
 sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixpkgs
 ```
 ```sh
