@@ -56,7 +56,7 @@ nix-channel --list | grep nixos
 
 ## Steam / external drive notes
 
-If you store Steam libraries on another internal drive, these example commands can help:
+If you want store files on another internal drive wich is formatted to ext4, this commands help make i all just work:
 
 ```sh
 sudo chown -R <your-username>:users /mnt/DoubleDisk
