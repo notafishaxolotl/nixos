@@ -6,7 +6,7 @@ Welcome — this is my personal NixOS configuration. It's a first attempt at usi
 
 ## Quick notes & warnings
 
-- This repo contains a lot of different configurations I've tried, so be selective when copying or enabling packages/modules — only enable what you actually want to use.
+- This repo contains a lot of different configurations I've tried, so be selective when copying/enabling packages/modules — only enable what you actually want to use.
 - Make sure your `home.stateVersion` / `system.stateVersion` match your system original's before switching configurations. Mismatched state versions may cause issues.
 - Environment modules (in the repo) are useful, trust me — they show what each environment contains.
 
@@ -59,9 +59,16 @@ nix-channel --list | grep nixos
 If you want store files on another internal drive wich is formatted to ext4, this commands help make i all just work:
 
 ```sh
-sudo chown -R <your-username>:users /mnt/DoubleDisk
-mkdir -p /mnt/DoubleDisk/SteamLibrary/steamapps
+sudo chown -R <your-username>:users /mnt/<your-mount-point>
 ```
+
+And if you want Steam to recognize your drive for games.
+
+```sh
+mkdir -p /mnt/<your-mount-point>/SteamLibrary/steamapps
+```
+
+Make sure <your-mount-point> and the drive uuid match in 'drives.nix'.
 
 Set custom Steam icons (SteamGridDB has many). Steam's configuration for custom icons is manual.
 
