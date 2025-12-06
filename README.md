@@ -49,7 +49,9 @@ To view configured channels:
 ```sh
 nix-channel --list | grep nixos
 ```
+
 You can run these with sudo if you want them system-wide. From my experience, it's safe.
+
 ---
 
 ## Steam / external drive notes
