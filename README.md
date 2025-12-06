@@ -34,13 +34,10 @@ bash -c "$(curl -sLo- https://superfile.dev/install.sh)"
 
 ## Enable nixpkgs unstable (optional)
 
-If you need packages from `nixos-unstable`, add the channel and update:
+If you need pkgs from `nixos-unstable`, add the channel and update:
 
 ```sh
-# Per user
 nix-channel --add https://channels.nixos.org/nixos-unstable nixpkgs
-# System wide
-sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixpkgs
 ```
 ```sh
 nix-channel --update
@@ -52,7 +49,7 @@ To view configured channels:
 ```sh
 nix-channel --list | grep nixos
 ```
-
+You can run these with sudo if you want it system wide, from my experience it's safe.
 ---
 
 ## Steam / external drive notes
