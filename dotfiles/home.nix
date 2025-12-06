@@ -68,6 +68,7 @@ in
     #python3Full
     krita
     scrcpy
+    btop-rocm
     duckstation
     pcsx2
     rpcs3
