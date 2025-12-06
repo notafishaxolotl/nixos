@@ -41,7 +41,8 @@ If you need packages from `nixos-unstable`, add the channel and update:
 nix-channel --add https://channels.nixos.org/nixos-unstable nixpkgs
 # If required
 sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixpkgs
-
+```
+```sh
 nix-channel --update
 sudo nixos-rebuild switch --upgrade
 ```
