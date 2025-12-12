@@ -116,7 +116,7 @@
   users.users.acito = {
     isNormalUser = true;
     description = "Acito";
-    extraGroups = [ "networkmanager" "wheel" ]; # Network admin and sudo
+    extraGroups = [ "networkmanager" "wheel" "dialout" ]; # Network admin and sudo
     packages = with pkgs; [];
   };
 

@@ -12,8 +12,7 @@
     hyprpolkitagent
     labwc-tweaks
     labwc-menu-generator
-    labwc-gtktheme
-    eww
+    labwc-gtktheme 
     dunst
     playerctl
     walker
