@@ -76,7 +76,7 @@ in
     ardour
     hollywood
     spotify-player
-    esptool-ck
+    esptool
     espflash
     usbimager
     unzip
